@@ -12,6 +12,7 @@ myApp.controller('mainController', function ($timeout, motivationFactory) {
 
   vm.fullPageOptions = {
     verticalCentered: false,
+    navigation: true,
     onLeave: function (index, nextIndex, direction) {
       console.log(index, nextIndex, direction)
       if (nextIndex === 2) {
@@ -52,6 +53,11 @@ myApp.controller('mainController', function ($timeout, motivationFactory) {
     $timeout(function () {
       vm.setClock()
     }, 500)
+  }
+
+  vm.installExtension = function () {
+    console.log('HERE')
+    chrome.webstore.install()
   }
 
   function checkTime (i) {

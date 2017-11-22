@@ -6,17 +6,33 @@
         <link rel="stylesheet" href="libs/font-awesome-4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="libs/fullPage/jquery.fullPage.css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+        <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/ibohcmhgdefdgdcncpgjoogdenojmjmo">
     </head>
     <body ng-app="blockchange" ng-controller="mainController as vm">
       <div full-page options="vm.fullPageOptions">
         <div class="section cover-section"
         ng-style="{'background-image':'url(public/img/img-' + vm.randomImageId + '.jpg)'}"
-        >
-          <div class="cover-section__clock" ng-init="vm.setClock()">
-            {{vm.windowState.time}}
+        > 
+          <div class="cover-section__top-third">
+            
           </div>
-          <div class="cover-section__salutation">
-            {{vm.windowState.salutation}}
+
+          <div class="cover-section__middle-third">
+            <div class="cover-section__clock" ng-init="vm.setClock()">
+              {{vm.windowState.time}}
+            </div>
+            <div class="cover-section__salutation">
+              {{vm.windowState.salutation}}
+            </div>  
+          </div>
+
+          <div class="cover-section__bottom-third">
+            <div class="cover-section__cta" ng-init="vm.setClock()">
+              Make a difference. Just by browsing the web.
+            </div>
+            <div ng-click="vm.installExtension()" class="cover-section__download">
+              + Add to Chrome
+            </div>
           </div>
         </div>
         <div class="section what-section">
@@ -25,7 +41,7 @@
               We want to change how you donate.
             </div>
             <div class="what-section__text-wrapper__explanation">
-              We use blockchain technology to help you help others. With Blocks for Change, every tab you open helps us build a better world. Instead of money, you donate computer power. We use this power to mine cryptocoins like Bitcoin.
+              We use blockchain technology to help you help others. Every tab you open helps us build a better world. Blocks for Change is a light-weight Google Chrome extension that helps you donate spare computer power. We use this power to mine cryptocoins like Bitcoin for charity.
             </div>
           </div>
         </div>
