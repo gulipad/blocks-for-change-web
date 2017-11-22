@@ -1,0 +1,14 @@
+<div class="settings-container">
+  <p class="settings__title">Settings</p>
+  <hr class="settings__separator">
+  <div class="settings__options">
+    <div class="settings__options-row">
+      <i id="miner-status"
+        class="fa miner-status__button"
+        ng-class="vm.minerStatus ? 'fa-toggle-on' : 'fa-toggle-off'"
+        ng-click="vm.toggleMiner()"></i>
+   	  <label for="miner-status">Miner Status: {{vm.minerStatus ? 'on' : 'off'}}</label>
+    </div>
+  </div>
+
+</div>

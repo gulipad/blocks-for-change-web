@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Blocks for Change</title>
+        <link rel="stylesheet" href="public/css/index.css">
+        <link rel="stylesheet" href="libs/font-awesome-4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="libs/fullPage/jquery.fullPage.css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    </head>
+    <body ng-app="blockchange" ng-controller="mainController as vm">
+      <div full-page options="vm.fullPageOptions">
+        <div class="section cover-section"
+        ng-style="{'background-image':'url(public/img/img-' + vm.randomImageId + '.jpg)'}"
+        >
+          <div class="cover-section__clock" ng-init="vm.setClock()">
+            {{vm.windowState.time}}
+          </div>
+          <div class="cover-section__salutation">
+            {{vm.windowState.salutation}}
+          </div>
+        </div>
+        <div class="section what-section">
+          <div ng-show="vm.showWhatText" class="what-section__text-wrapper">
+            <div class="what-section__text-wrapper__main">
+              We want to change how you donate.
+            </div>
+            <div class="what-section__text-wrapper__explanation">
+              We use blockchain technology to help you help others. With Blocks for Change, every tab you open helps us build a better world. Instead of money, you donate computer power. We use this power to mine cryptocoins like Bitcoin.
+            </div>
+          </div>
+        </div>
+        <div class="section">Another section</div>
+      </div>
+
+      <script type="text/javascript" src="libs/angular/angular.min.js"></script>
+      <script type="text/javascript" src="js/app.js"></script>
+      <script type="text/javascript" src="libs/jquery/dist/jquery.min.js"></script>
+      <script type="text/javascript" src="libs/fullPage/scrolloverflow.min.js"></script>
+      <script type="text/javascript" src="libs/fullPage/jquery.fullPage.js"></script>
+      <script type="text/javascript" src="js/factory/motivation-factory.js"></script>
+      <script type="text/javascript" src="js/controllers/main-controller.js"></script>
+      <script type="text/javascript" src="js/components/blocks-settings-component.js"></script>
+      <script type="text/javascript" src="js/components/blocks-mining-for-component.js"></script>
+      <script type="text/javascript" src="libs/fullPage/angular-fullpage.min.js"></script>
+    </body>
+</html>

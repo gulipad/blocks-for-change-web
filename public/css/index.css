@@ -1,0 +1,98 @@
+html {
+  font-size: 16px;
+  color: #fff;
+}
+
+body {
+  font-family: "Roboto", "Lucida Grande", Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #191919;
+}
+
+.cover-section {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  overflow: hidden;
+}
+
+.cover-section {
+  -webkit-animation: fade-in 3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  cursor: default;
+  justify-content: center;
+}
+
+.cover-section__clock {
+  font-size: 10.5em;
+  font-weight: 500;
+  color: white;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.cover-section__salutation {
+  font-size: 3em;
+  font-weight: 500;
+  margin: 0;
+  color: white;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+@-webkit-keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-webkit-keyframes slide-up {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+/********************************WHAT SECTION************************************/
+.what-section {
+  background: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.what-section__text-wrapper {
+  text-align: center;
+  max-width: 900px;
+  -webkit-animation-name: fade-in, slide-up;
+  -webkit-animation-duration: 3s, 1.5s
+}
+
+.what-section__text-wrapper__main {
+  font-size: 3rem;
+  font-weight: 200;
+  margin: 0 0 20px 0;
+}
+.what-section__text-wrapper__explanation {
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin: 0 0 20px 0;
+}
+
+
+
+
+
+
+
+
