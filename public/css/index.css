@@ -10,21 +10,75 @@ body {
   background: #191919;
 }
 
+.web__navbar {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  z-index: 100;
+  height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.web__navbar__content-wrapper {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__logo-wrapper {
+  display: flex;
+}
+
+.navbar__logo-wrapper__logo {
+  width: 95px;
+  height: 95px;
+}
+
+.navbar__logo-wrapper__text {
+  font-weight: 100;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+.text--light {
+  color: white
+}
+
+.text--dark {
+  color: black
+}
+
+.social-share__wrapper {
+  font-weight: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .cover-section__top-third,
 .cover-section__middle-third,
 .cover-section__bottom-third {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .cover-section__top-third {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex-basis: 25%;
 }
 
 .cover-section__middle-third,
 .cover-section__bottom-third {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex-basis: 37.5%;
 }
 
@@ -49,6 +103,7 @@ body {
   width: 100%;
   cursor: default;
   justify-content: center;
+  z-index: 0
 }
 
 .cover-section__cta {
@@ -106,6 +161,26 @@ body {
   }
 }
 
+/********************************SOCIAL SHARE************************************/
+ul.share-buttons{
+  list-style: none;
+  padding: 0;
+}
+
+ul.share-buttons li{
+  display: inline;
+}
+
+ul.share-buttons .sr-only{
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
 /********************************WHAT SECTION************************************/
 .what-section {
   background: #fff;
@@ -113,6 +188,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 0
 }
 
 .what-section__text-wrapper {

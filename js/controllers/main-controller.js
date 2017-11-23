@@ -9,6 +9,7 @@ myApp.controller('mainController', function ($timeout, motivationFactory) {
   vm.randomImageId = motivationFactory.getRandomImageId() // Get random image
   vm.randomPhrase = motivationFactory.getRandomPhrase()
   vm.isUserOnline = window.navigator.onLine
+  vm.whiteBg = false
 
   vm.fullPageOptions = {
     verticalCentered: false,
@@ -16,10 +17,12 @@ myApp.controller('mainController', function ($timeout, motivationFactory) {
     onLeave: function (index, nextIndex, direction) {
       console.log(index, nextIndex, direction)
       if (nextIndex === 2) {
+        vm.whiteBg = true
         vm.showWhatText = true
       }
 
       if (index === 2) {
+        vm.whiteBg = false
         vm.showWhatText = false
       }
     }
