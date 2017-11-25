@@ -103,10 +103,12 @@ myApp.controller('mainController', function ($timeout, motivationFactory) {
   }
 
   vm.installExtension = function () {
-    console.log('HERE')
-    chrome.webstore.install()
+    chrome.webstore.install(null, null, failureCallback)
   }
 
+  function failureCallback (e) {
+    console.log(e)
+  }
   function checkTime (i) {
     if (i < 10) {
       i = '0' + i
