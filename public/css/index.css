@@ -181,33 +181,102 @@ ul.share-buttons .sr-only{
   width: 1px;
   overflow: hidden;
 }
-/********************************WHAT SECTION************************************/
+/********************************SECTIONS************************************/
+.why-section,
+.how-section,
 .what-section {
+  text-align: center;
   background: #fff;
-  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 0
+}
+
+.why-section__content-wrapper,
+.how-section__content-wrapper,
+.what-section__content-wrapper {
+  max-width: 1000px;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-animation-name: fade-in, slide-up;
+  -webkit-animation-duration: 3s, 1.5s
+}
+
+.why-section__text-wrapper__main,
+.how-section__text-wrapper__main,
+.what-section__text-wrapper__main {
+  font-size: 4.2rem;
+  font-weight: 200;
+  margin: 0 0 20px 0;
+}
+.why-section__text-wrapper__explanation,
+.how-section__text-wrapper__explanation,
+.what-section__text-wrapper__explanation {
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin: 0 0 20px 0;
+}
+
+.how-section {
+  background-image: url('../img/img-how.jpg');
+  background-size: cover;
+  padding: 6% 0 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 0
 }
 
-.what-section__text-wrapper {
-  text-align: center;
-  max-width: 900px;
+.how-section__content-wrapper {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   -webkit-animation-name: fade-in, slide-up;
   -webkit-animation-duration: 3s, 1.5s
 }
 
-.what-section__text-wrapper__main {
-  font-size: 3rem;
+.how-section__money-counter {
+  font-size: 3.5rem;
   font-weight: 200;
   margin: 0 0 20px 0;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.what-section__text-wrapper__explanation {
+
+.money-counter__input {
+  font-size: 3.5rem;
+  font-weight: 200;
+  margin: 0 auto;
+  padding-top: 15px;
+  display: block;
+  background: 0;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  outline: 0;
+  text-align: center;
+  width: 300px;
+}
+
+.what-section__download {
+  border: 3px solid black;
+  cursor: pointer;
+  border-radius: 8px;
   font-size: 1.5rem;
-  font-weight: 100;
-  margin: 0 0 20px 0;
+  font-weight: 300;
+  padding: 15px 40px;
+  transition: background, color, 0.5s;
+  background: none;
+  margin-top: 20px;
 }
+
 
 
 

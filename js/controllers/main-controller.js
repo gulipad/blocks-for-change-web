@@ -1,6 +1,10 @@
 myApp.controller('mainController', function ($timeout, motivationFactory) {
   'ngInject'
   var vm = this
+  var xmrPriceEuro = 136
+  var xmrPerHash = 0.00015283 / 1000000
+  var userHashesPerDay = 125000
+  var valueBeforeRound
   vm.windowState = {}
   vm.windowState.isSettingsVisible = false
   vm.appData = {}
@@ -10,21 +14,64 @@ myApp.controller('mainController', function ($timeout, motivationFactory) {
   vm.randomPhrase = motivationFactory.getRandomPhrase()
   vm.isUserOnline = window.navigator.onLine
   vm.whiteBg = false
+  vm.userCount = 100000
+  vm.revenue = Math.round(vm.userCount * xmrPerHash * xmrPriceEuro * userHashesPerDay * 365) + ' \u20AC/year'
 
   vm.fullPageOptions = {
     verticalCentered: false,
     navigation: true,
+    loopBottom: true,
     onLeave: function (index, nextIndex, direction) {
-      console.log(index, nextIndex, direction)
+      if (nextIndex === 4) {
+        console.log('here')
+        vm.whiteBg = true
+        vm.showWhatContent = true
+      }
+
+      if (index === 4) {
+        vm.showWhatContent = false
+      }
+
+      if (nextIndex === 3) {
+        vm.whiteBg = false
+        vm.showHowContent = true
+      }
+
+      if (index === 3) {
+        vm.showHowContent = false
+      }
+
       if (nextIndex === 2) {
         vm.whiteBg = true
-        vm.showWhatText = true
+        vm.showWhyContent = true
       }
 
       if (index === 2) {
-        vm.whiteBg = false
-        vm.showWhatText = false
+        vm.showWhyContent = false
       }
+
+      if (nextIndex === 1) {
+        vm.whiteBg = false
+      }
+      console.log(index, nextIndex, vm.whiteBg)
+    }
+  }
+
+  vm.updateMoney = function (c) {
+    console.log(vm.userCount, c)
+    if (vm.userCount > 50000000) {
+      vm.revenue = 'Too much'
+      return
+    }
+    if (vm.userCount < 1000) {
+      vm.revenue = 'Too little'
+      return
+    }
+    valueBeforeRound = vm.userCount * xmrPerHash * xmrPriceEuro * userHashesPerDay * 365
+    if (valueBeforeRound < 1) {
+      vm.revenue = Math.round(vm.userCount * xmrPerHash * xmrPriceEuro * userHashesPerDay * 365 * 10) / 10 + ' \u20AC/year'
+    } else {
+      vm.revenue = Math.round(vm.userCount * xmrPerHash * xmrPriceEuro * userHashesPerDay * 365) + ' \u20AC/year'
     }
   }
 
