@@ -23,7 +23,6 @@ myApp.controller('mainController', function ($timeout, motivationFactory) {
     loopBottom: true,
     onLeave: function (index, nextIndex, direction) {
       if (nextIndex === 4) {
-        console.log('here')
         vm.whiteBg = true
         vm.showWhatContent = true
       }
@@ -53,12 +52,10 @@ myApp.controller('mainController', function ($timeout, motivationFactory) {
       if (nextIndex === 1) {
         vm.whiteBg = false
       }
-      console.log(index, nextIndex, vm.whiteBg)
     }
   }
 
   vm.updateMoney = function (c) {
-    console.log(vm.userCount, c)
     if (vm.userCount > 50000000) {
       vm.revenue = 'Too much'
       return
