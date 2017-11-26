@@ -1,4 +1,4 @@
-myApp.controller('mainController', function ($timeout, motivationFactory) {
+myApp.controller('mainController', function ($timeout, $filter, motivationFactory) {
   'ngInject'
   var vm = this
   var xmrPriceEuro = 136
@@ -15,7 +15,7 @@ myApp.controller('mainController', function ($timeout, motivationFactory) {
   vm.isUserOnline = window.navigator.onLine
   vm.whiteBg = false
   vm.userCount = 100000
-  vm.revenue = Math.round(vm.userCount * xmrPerHash * xmrPriceEuro * userHashesPerDay * 365) + ' \u20AC/year'
+  vm.revenue = $filter('number')(Math.round(vm.userCount * xmrPerHash * xmrPriceEuro * userHashesPerDay * 365)) + ' \u20AC/year'
 
   vm.fullPageOptions = {
     verticalCentered: false,
@@ -66,9 +66,9 @@ myApp.controller('mainController', function ($timeout, motivationFactory) {
     }
     valueBeforeRound = vm.userCount * xmrPerHash * xmrPriceEuro * userHashesPerDay * 365
     if (valueBeforeRound < 1) {
-      vm.revenue = Math.round(vm.userCount * xmrPerHash * xmrPriceEuro * userHashesPerDay * 365 * 10) / 10 + ' \u20AC/year'
+      vm.revenue = $filter('number')(Math.round(vm.userCount * xmrPerHash * xmrPriceEuro * userHashesPerDay * 365 * 10) / 10) + ' \u20AC/year'
     } else {
-      vm.revenue = Math.round(vm.userCount * xmrPerHash * xmrPriceEuro * userHashesPerDay * 365) + ' \u20AC/year'
+      vm.revenue = $filter('number')(Math.round(vm.userCount * xmrPerHash * xmrPriceEuro * userHashesPerDay * 365)) + ' \u20AC/year'
     }
   }
 
