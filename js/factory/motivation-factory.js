@@ -7,7 +7,7 @@ myApp.factory('motivationFactory', function ($q) {
       'Three months from now, you\'ll thank yourself.',
       'Ready. Steady. Go!'
     ],
-    imagesIds: [...Array(18).keys()]
+    imagesIds: [...Array(17).keys()]
   }
 
   _motivationFactory.getRandomPhrase = function () {
