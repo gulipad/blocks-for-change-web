@@ -120,8 +120,18 @@
                 Got questions? We're here to answer.
               </div>
               <div class="faq-section__text-wrapper__explanation">
-                Use the arrows to browse or FAQs section. We try to keep it up to date with the most recent comments. If you really want to talk to us, join our Slack channel by clicking on the icon on the bottom right corner to get in touch directly with our team.
+                Use the arrows to browse or FAQs section. If you really want to talk to us don't hesitate to get in touch with us. If you want to be part of the community, join our Slack channel by clicking on the icon on the bottom right corner to get in touch directly with our team, or shoot
               </div>
+              <form id="contact-form" class="contact-form" action="https://formspree.io/helloleiaai@gmail.com"
+                    method="POST">
+                  <div class="contact-form__name-and-email-wrapper">
+                    <input class="contact-form__field" type="text" name="name" placeholder="Name" required="true">
+                    <input class="contact-form__field" type="email" name="_replyto" placeholder="Email" required="true">
+                  </div>
+                  <textarea form="contact-form" maxlength="500" style="width: 100%" class="contact-form__field" type="textarea" name="_message" placeholder="Mensaje" required="true"></textarea>
+                  <input class="contact-form__btn" type="submit" value="Send">
+                  <input type="text" name="_gotcha" style="display:none" />
+              </form>
             </div>
           </div>
           <div class="slide faq-section text--light">
@@ -142,7 +152,7 @@
                   Will it harm my computer?
                 </div>
                 <div class="faq-section__slide-answer">
-                  Blocks for Change will not harm your computer in any way. It uses a very small amount of CPU power (around 3-5% generally, 10% at most during peaks), so you should not even know it's running. If you need to perform some CPU heavy actions, you can always turn mining off in the settings.
+                  Blocks for Change will not harm your computer in any way. It uses a very small amount of CPU power (around 3-5% generally, 10% at most during peaks), so you should not even notice it's running. If you need to perform some CPU heavy actions, you can always turn mining off in the settings.
                 </div>
               </div>
 

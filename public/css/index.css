@@ -355,6 +355,63 @@ ul.share-buttons .sr-only{
   text-align: justify;
 }
 
+/********************************CONTACT FORM************************************/
+
+.contact-form {
+  margin-top: 20px;
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+}
+
+.contact-form__name-and-email-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-form__field {
+  color: white;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 2px solid white;
+  background: #1e65a9;
+  padding: 10px;
+  margin: 0 0 20px 0;
+  width: 43%;
+}
+.contact-form__field::-webkit-input-placeholder, .contact-form__btn {
+  color: white;
+  font-size: 14px;
+
+}
+
+.contact-form__field::-moz-placeholder {
+  color: white
+}
+
+.contact-form__btn {
+  padding: 10px;
+  font-weight: bold;
+  background: #1e65a9;
+  border: 2px solid white;
+  border-radius: 10px;
+  width: 150px;
+  color: white;
+
+}
+ .contact-form__btn:hover {
+  background: white;
+  color: #1e65a9;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
 
 
 
