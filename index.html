@@ -41,6 +41,11 @@
           </div>
         </div>
       </div>
+      <a href="https://join.slack.com/t/blocksforchange/shared_invite/enQtMjc3NDE1Mzc3NTIxLWFlYjY5ZTczNmE4YmVlZWNlOTQ3NDFmYTM1MDAzOWY5ZjE0NWNmNWU0OGUyNjQ3MWM0OTkyYjlkNWNhM2QwYWY" target="_blank" class="slack-link"
+        ng-class="{'text--dark': vm.whiteBg, 'text--light': !vm.whiteBg}">
+        <div class="fa fa-2x fa-slack"></div>
+        <span class="slack-link__text">Join Slack!</span>
+      </a>
       <div full-page options="vm.fullPageOptions">
         <div class="section cover-section"
         ng-style="{'background-image':'url(public/img/img-' + vm.randomImageId + '.jpg)'}"
@@ -84,7 +89,7 @@
               Become part of a network of heroes.
             </div>
             <div class="how-section__text-wrapper__explanation">
-              So how does it work? Instead of donating money or time, you help us by donating a tiny bit of your computer power. We use this power to mine cryptocoins like Bitcoin, and then give it all away. We are just getting started. We are still growing. Enter a number below to see how much our network can generate.
+              So how does it work? Instead of donating money or time, you help us by donating a tiny bit of your computer power. We use this power to mine cryptocoins (think Bitcoin), and then give it all away. We are just getting started. We are still growing. Enter a number below to see how much our network can generate.
             </div>
             <div class="how-section__money-counter">
               <input type="number" name="users" min="0" step="1000" ng-model="vm.userCount" ng-model-options="{ allowInvalid: true }" ng-change="vm.updateMoney()" class="money-counter__input">
@@ -94,7 +99,7 @@
             </div>
           </div>
         </div>
-        <div class="section what-section"
+        <div class="section what-section text--light"
         ng-class="{'text--dark': vm.whiteBg, 'text--light': !vm.whiteBg}">
           <div ng-show="vm.showWhatContent" class="what-section__content-wrapper">
             <div class="what-section__text-wrapper__main">
@@ -105,6 +110,52 @@
             </div>
             <div ng-click="vm.installExtension()" class="what-section__download">
               + Add to Chrome
+            </div>
+          </div>
+        </div>
+        <div class="section faq-section text--light">
+          <div class="slide">
+            <div ng-show="vm.showFAQContent" class="faq-section__content-wrapper">
+              <div class="faq-section__text-wrapper__main">
+                Got questions? We're here to answer.
+              </div>
+              <div class="faq-section__text-wrapper__explanation">
+                Use the arrows to browse or FAQs section. We try to keep it up to date with the most recent comments. If you really want to talk to us, join our Slack channel by clicking on the icon on the bottom right corner to get in touch directly with our team.
+              </div>
+            </div>
+          </div>
+          <div class="slide faq-section text--light">
+            <div class="faq-section__slide-wrapper">
+              <div class="faq-section__question-wrapper">
+                <div class="faq-section__slide-question">
+                  Who does the money go to?
+                </div>
+                <div class="faq-section__slide-answer">
+                  We are working hard to look for partner charitable organizations to donate the funds to. Our goal is to partner with smaller organizatinos who have more difficulties finding donations. If you are part of a charitable organization, join our Slack channel to get in touch! Right now, we do not have any costs, so we donate 100% of what is generated. We are also putting in a lot of effort to make the entire process as transparent as possible. The possibility for you to vote for projects based on how many tabs you have opened is also in the roadmap.
+                </div>
+              </div>
+
+              <div><br><br></div>
+
+              <div class="faq-section__question-wrapper">
+                <div class="faq-section__slide-question">
+                  Will it harm my computer?
+                </div>
+                <div class="faq-section__slide-answer">
+                  Blocks for Change will not harm your computer in any way. It uses a very small amount of CPU power (around 3-5% generally, 10% at most during peaks), so you should not even know it's running. If you need to perform some CPU heavy actions, you can always turn mining off in the settings.
+                </div>
+              </div>
+
+              <div><br><br></div>
+              
+              <div class="faq-section__question-wrapper">
+                <div class="faq-section__slide-question">
+                  Do I have to pay to use it?
+                </div>
+                <div class="faq-section__slide-answer">
+                  Nope. Downloading - and using - Blocks for Change, is free and always will be. Just by using it you will already be helping out! If you want to help the team, get in touch with us through Slack, and share the project. The more users we have the more people we'll be able to help.
+                </div>
+              </div>
             </div>
           </div>
         </div>

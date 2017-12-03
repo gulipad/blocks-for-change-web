@@ -22,6 +22,17 @@ myApp.controller('mainController', function ($timeout, $filter, motivationFactor
     navigation: true,
     loopBottom: true,
     onLeave: function (index, nextIndex, direction) {
+      if (nextIndex === 5) {
+        vm.whiteBg = false
+        vm.showFAQContent = true
+        $('#fp-nav').addClass('hide-nav')
+      }
+
+      if (index === 5) {
+        vm.showFAQContent = false
+        $('#fp-nav').removeClass('hide-nav')
+      }
+
       if (nextIndex === 4) {
         vm.whiteBg = true
         vm.showWhatContent = true

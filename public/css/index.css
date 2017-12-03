@@ -10,6 +10,23 @@ body {
   background: #191919;
 }
 
+.slack-link {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  font-weight: 100;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.slack-link__text {
+  margin-left: 5px;
+  margin-bottom: 3px;
+}
+
 .web__navbar {
   position: absolute;
   width: 100%;
@@ -184,7 +201,8 @@ ul.share-buttons .sr-only{
 /********************************SECTIONS************************************/
 .why-section,
 .how-section,
-.what-section {
+.what-section,
+.faq-section {
   text-align: center;
   background: #fff;
   display: flex;
@@ -196,9 +214,10 @@ ul.share-buttons .sr-only{
 
 .why-section__content-wrapper,
 .how-section__content-wrapper,
-.what-section__content-wrapper {
+.what-section__content-wrapper,
+.faq-section__content-wrapper {
   max-width: 1000px;
-  margin: 50px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -208,14 +227,16 @@ ul.share-buttons .sr-only{
 
 .why-section__text-wrapper__main,
 .how-section__text-wrapper__main,
-.what-section__text-wrapper__main {
+.what-section__text-wrapper__main,
+.faq-section__text-wrapper__main {
   font-size: 4.2rem;
   font-weight: 200;
   margin: 0 0 20px 0;
 }
 .why-section__text-wrapper__explanation,
 .how-section__text-wrapper__explanation,
-.what-section__text-wrapper__explanation {
+.what-section__text-wrapper__explanation,
+.faq-section__text-wrapper__explanation {
   font-size: 1.5rem;
   font-weight: 100;
   margin: 0 0 20px 0;
@@ -289,6 +310,49 @@ ul.share-buttons .sr-only{
   padding: 15px 40px;
   transition: background, color, 0.5s;
   margin-top: 20px;
+}
+
+/********************************FAQ SECTION************************************/
+.hide-nav {
+  display: none
+}
+
+.faq-section {
+  background: #1e65a9;
+}
+
+.faq-section__content-wrapper {
+  justify-content: center;
+  height: 100%;
+}
+
+.faq-section__slide-wrapper {
+  max-width: 1000px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-animation-name: fade-in, slide-up;
+  -webkit-animation-duration: 3s, 1.5s
+}
+
+.faq-section__question-wrapper {
+
+}
+
+.faq-section__slide-question {
+  font-size: 2.5rem;
+  font-weight: 200;
+  margin: 0 0 20px 0;
+}
+
+.faq-section__slide-answer {
+  font-size: 1.2rem;
+  font-weight: 100;
+  margin: 0 0 20px 0;
+  text-align: justify;
 }
 
 
