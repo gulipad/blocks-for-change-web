@@ -61,7 +61,7 @@ body {
 }
 
 .text--light {
-  color: white
+  color: #fdfdfd
 }
 
 .text--dark {
@@ -127,14 +127,14 @@ body {
   font-size: 2em;
   font-weight: 100;
   margin: 0;
-  color: white;
+  color: #fdfdfd;
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
 .cover-section__clock {
   font-size: 9.5em;
   font-weight: 500;
-  color: white;
+  color: #fdfdfd;
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -142,12 +142,12 @@ body {
   font-size: 3em;
   font-weight: 500;
   margin: 0;
-  color: white;
+  color: #fdfdfd;
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
 .cover-section__download {
-  border: 3px solid white;
+  border: 3px solid #fdfdfd;
   cursor: pointer;
   border-radius: 8px;
   font-size: 1.5rem;
@@ -160,7 +160,7 @@ body {
 
 .cover-section__download:hover {
   transition: background, color, 0.5s;
-  background: white;
+  background: #fdfdfd;
   color: #333333;
 }
 
@@ -302,8 +302,13 @@ ul.share-buttons .sr-only{
 .what-section__download:hover {
   border: 3px solid #333333;
   cursor: pointer;
+<<<<<<< HEAD
   color: white;
   background-color: #333333;
+=======
+  color: #fdfdfd;
+  background-color: black;
+>>>>>>> Less contrast
   border-radius: 8px;
   font-size: 1.5rem;
   font-weight: 300;
@@ -373,37 +378,37 @@ ul.share-buttons .sr-only{
 }
 
 .contact-form__field {
-  color: white;
+  color: #fdfdfd;
   font-size: 14px;
   border-radius: 10px;
-  border: 2px solid white;
+  border: 2px solid #fdfdfd;
   background: #1e65a9;
   padding: 10px;
   margin: 0 0 20px 0;
   width: 43%;
 }
 .contact-form__field::-webkit-input-placeholder, .contact-form__btn {
-  color: white;
+  color: #fdfdfd;
   font-size: 14px;
 
 }
 
 .contact-form__field::-moz-placeholder {
-  color: white
+  color: #fdfdfd
 }
 
 .contact-form__btn {
   padding: 10px;
   font-weight: bold;
   background: #1e65a9;
-  border: 2px solid white;
+  border: 2px solid #fdfdfd;
   border-radius: 10px;
   width: 150px;
-  color: white;
+  color: #fdfdfd;
 
 }
  .contact-form__btn:hover {
-  background: white;
+  background: #fdfdfd;
   color: #1e65a9;
   -webkit-transition: all 500ms ease;
   -moz-transition: all 500ms ease;
