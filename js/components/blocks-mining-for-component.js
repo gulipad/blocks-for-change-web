@@ -24,6 +24,6 @@ function blocksMiningForController ($window) {
     if (!vm.minerStatus) {
       return
     }
-    $window.open('http://www.helloleia.com', '_blank')
+    $window.open('http://www.blocksforchange.org', '_blank')
   }
 }
