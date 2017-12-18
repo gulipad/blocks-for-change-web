@@ -302,13 +302,8 @@ ul.share-buttons .sr-only{
 .what-section__download:hover {
   border: 3px solid #333333;
   cursor: pointer;
-<<<<<<< HEAD
-  color: white;
-  background-color: #333333;
-=======
   color: #fdfdfd;
-  background-color: black;
->>>>>>> Less contrast
+  background-color: #333333;
   border-radius: 8px;
   font-size: 1.5rem;
   font-weight: 300;
