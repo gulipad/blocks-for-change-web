@@ -10,6 +10,10 @@ body {
   background: #191919;
 }
 
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide {
+  display: none !important;
+}
+
 .slack-link {
   position: absolute;
   bottom: 20px;

@@ -4,6 +4,7 @@
   xmlns:fb="http://ogp.me/ns/fb#">
     <head>
         <title>Blocks for Change</title>
+        <link rel="shortcut icon" href="icon16.ico" type="image/x-icon">
         <meta property="og:image" content="http://www.blocksforchange.org/public/img/img-share.jpg" />
         <meta property="og:title" content="Blocks for Change - A charitable dashboard for Chrome"/>
         <meta property="og:description" content="Let's change the way charitable donations work. Click to learn more!"/>
@@ -19,7 +20,7 @@
         <script type="text/javascript" src="libs/fullPage/jquery.fullPage.js"></script>
         <script type="text/javascript" src="libs/fullPage/scrolloverflow.min.js"></script>
     </head>
-    <body ng-app="blockchange" ng-controller="mainController as vm">
+    <body ng-cloak ng-app="blockchange" ng-controller="mainController as vm">
       <div class="web__navbar" ng-class="{'text--dark': vm.whiteBg, 'text--light': !vm.whiteBg}">
         <div class="web__navbar__content-wrapper">
           <div class="navbar__logo-wrapper">
