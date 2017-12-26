@@ -3,22 +3,24 @@
   xmlns="http://www.w3.org/1999/xhtml"
   xmlns:fb="http://ogp.me/ns/fb#">
     <head>
-        <title>Blocks for Change</title>
-        <link rel="shortcut icon" href="icon16.ico" type="image/x-icon">
-        <meta property="og:image" content="http://www.blocksforchange.org/public/img/img-share.jpg" />
-        <meta property="og:title" content="Blocks for Change - A charitable dashboard for Chrome"/>
-        <meta property="og:description" content="Let's change the way charitable donations work. Click to learn more!"/>
-        <meta property="og:image:width" content="450"/>
-        <meta property="og:image:height" content="298"/>
-        <link rel="stylesheet" href="public/css/index.css">
-        <link rel="stylesheet" href="libs/font-awesome-4.5.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="libs/fullPage/jquery.fullPage.css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-        <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/ibohcmhgdefdgdcncpgjoogdenojmjmo">
-        <script type="text/javascript" src="libs/angular/angular.min.js"></script>
-        <script type="text/javascript" src="libs/jquery/dist/jquery.min.js"></script>
-        <script type="text/javascript" src="libs/fullPage/jquery.fullPage.js"></script>
-        <script type="text/javascript" src="libs/fullPage/scrolloverflow.min.js"></script>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+      <title>Blocks for Change</title>
+      <link rel="shortcut icon" href="icon16.ico" type="image/x-icon">
+      <meta property="og:image" content="http://www.blocksforchange.org/public/img/img-share.jpg" />
+      <meta property="og:title" content="Blocks for Change - A charitable dashboard for Chrome"/>
+      <meta property="og:description" content="Let's change the way charitable donations work. Click to learn more!"/>
+      <meta property="og:image:width" content="450"/>
+      <meta property="og:image:height" content="298"/>
+      <link rel="stylesheet" href="public/css/index.css">
+      <link rel="stylesheet" href="libs/font-awesome-4.5.0/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="libs/fullPage/jquery.fullPage.css" />
+      <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+      <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/ibohcmhgdefdgdcncpgjoogdenojmjmo">
+      <script type="text/javascript" src="libs/angular/angular.min.js"></script>
+      <script type="text/javascript" src="libs/jquery/dist/jquery.min.js"></script>
+      <script type="text/javascript" src="libs/fullPage/jquery.fullPage.js"></script>
+      <script type="text/javascript" src="libs/fullPage/scrolloverflow.min.js"></script>
+      <script src="libs/angular/angular-translate.min.js"></script>
     </head>
     <body ng-cloak ng-app="blockchange" ng-controller="mainController as vm">
       <div class="web__navbar" ng-class="{'text--dark': vm.whiteBg, 'text--light': !vm.whiteBg}">
@@ -30,7 +32,7 @@
           </div>
           <div class="social-share__wrapper">
             <div class="social-share__cta">
-              Help us grow <i class="fa fa-share-alt"></i>
+              {{ 'HELP_GROW' | translate }} <i class="fa fa-share-alt"></i>
             </div>
             <div class="social-share__buttons">
               <ul class="share-buttons">
@@ -45,12 +47,13 @@
       <a href="https://join.slack.com/t/blocksforchange/shared_invite/enQtMjc3NDE1Mzc3NTIxLWFlYjY5ZTczNmE4YmVlZWNlOTQ3NDFmYTM1MDAzOWY5ZjE0NWNmNWU0OGUyNjQ3MWM0OTkyYjlkNWNhM2QwYWY" target="_blank" class="slack-link"
         ng-class="{'text--dark': vm.whiteBg, 'text--light': !vm.whiteBg}">
         <div class="fa fa-2x fa-slack"></div>
-        <span class="slack-link__text">Join Slack!</span>
+        <span class="slack-link__text">{{ 'JOIN_SLACK' | translate }}</span>
       </a>
       <div full-page options="vm.fullPageOptions">
         <div class="section cover-section"
         ng-style="{'background-image':'url(public/img/img-' + vm.randomImageId + '.jpg)'}"
-        > 
+        >
+          <div class="image-overlay" ></div>
           <div class="cover-section__top-third">
           </div>
 
@@ -59,16 +62,16 @@
               {{vm.windowState.time}}
             </div>
             <div class="cover-section__salutation">
-              {{vm.windowState.salutation}}
+              {{vm.windowState.salutation | translate}}, {{'YOU' | translate}}
             </div>  
           </div>
 
           <div class="cover-section__bottom-third">
             <div class="cover-section__cta" ng-init="vm.setClock()">
-              Make a difference. Just by browsing the web.
+              {{'FRONT_PAGE.PROMPT' | translate}}
             </div>
             <div ng-click="vm.installExtension()" class="cover-section__download">
-              + Add to Chrome
+              {{'ADD_TO_CHROME' | translate}}
             </div>
           </div>
         </div>
@@ -76,10 +79,10 @@
           ng-class="{'text--dark': vm.whiteBg, 'text--light': !vm.whiteBg}">
           <div ng-show="vm.showWhyContent" class="why-section__content-wrapper">
             <div class="why-section__text-wrapper__main">
-              We believe in technology as a force for good.
+              {{'WHY_PAGE.TITLE' | translate}}
             </div>
             <div class="why-section__text-wrapper__explanation">
-              We have one mission. To turn technology into a tool for social change. The blockchain is revolutionizing money, businesses and organizations. Our idea is simple: we want to revolutionize charity.
+              {{'WHY_PAGE.TEXT' | translate}}
             </div>
           </div>
         </div>
@@ -87,15 +90,15 @@
           ng-class="{'text--dark': vm.whiteBg, 'text--light': !vm.whiteBg}">
           <div ng-show="vm.showHowContent" class="how-section__content-wrapper">
             <div class="how-section__text-wrapper__main">
-              Become part of a network of heroes.
+              {{'HOW_PAGE.TITLE' | translate}}
             </div>
             <div class="how-section__text-wrapper__explanation">
-              So how does it work? Instead of donating money or time, you help us by donating a tiny bit of your computer power. We use this power to mine cryptocoins (think Bitcoin), and then give it all away. We are just getting started. We are still growing. Enter a number below to see how much our network can generate.
+              {{'HOW_PAGE.TEXT' | translate}}
             </div>
             <div class="how-section__money-counter">
               <input type="number" name="users" min="0" step="1000" ng-model="vm.userCount" ng-model-options="{ allowInvalid: true }" ng-change="vm.updateMoney()" class="money-counter__input">
               <span>
-                users = {{vm.revenue}}
+                {{'HOW_PAGE.USERS' | translate}} = {{vm.revenue}} {{'HOW_PAGE.UNIT' | translate}}
               </span>
             </div>
           </div>
@@ -104,13 +107,13 @@
         ng-class="{'text--dark': vm.whiteBg, 'text--light': !vm.whiteBg}">
           <div ng-show="vm.showWhatContent" class="what-section__content-wrapper">
             <div class="what-section__text-wrapper__main">
-              It's more than just a dashboard. It's people helping people.
+              {{'WHAT_PAGE.TITLE' | translate}}
             </div>
             <div class="what-section__text-wrapper__explanation">
-              Blocks for Change is a beautiful dashboard for Chrome. It replaces your boring new tab page with a gorgeous, inspiring dashboard. Every tab you open a new tab, you also donate a tiny bit of CPU power to help us mine cryptocoin for charity.
+              {{'WHAT_PAGE.TEXT' | translate}}
             </div>
             <div ng-click="vm.installExtension()" class="what-section__download">
-              + Add to Chrome
+              {{'ADD_TO_CHROME' | translate}}
             </div>
           </div>
         </div>
@@ -118,19 +121,19 @@
           <div class="slide">
             <div ng-show="vm.showFAQContent" class="faq-section__content-wrapper">
               <div class="faq-section__text-wrapper__main">
-                Got questions? We're here to answer.
+                {{'FAQ.TITLE' | translate}}
               </div>
               <div class="faq-section__text-wrapper__explanation">
-                Use the arrows to browse or FAQs section. If you really want to talk to us don't hesitate to get in touch. If you want to be part of the community, join our Slack channel by clicking on the icon on the bottom right corner to get in touch directly with our team, or shoot us a message!
+                {{'FAQ.TEXT' | translate}}
               </div>
               <form id="contact-form" class="contact-form" action="https://formspree.io/helloleiaai@gmail.com"
                     method="POST">
                   <div class="contact-form__name-and-email-wrapper">
-                    <input class="contact-form__field" type="text" name="name" placeholder="Name" required="true">
-                    <input class="contact-form__field" type="email" name="_replyto" placeholder="Email" required="true">
+                    <input class="contact-form__field" type="text" name="name" placeholder="{{'NAME' | translate}}" required="true">
+                    <input class="contact-form__field" type="email" name="_replyto" placeholder="{{'EMAIL' | translate}}" required="true">
                   </div>
-                  <textarea form="contact-form" maxlength="500" style="width: 100%" class="contact-form__field" type="textarea" name="_message" placeholder="Message" required="true"></textarea>
-                  <input class="contact-form__btn" type="submit" value="Send">
+                  <textarea form="contact-form" maxlength="500" style="width: 100%" class="contact-form__field" type="textarea" name="_message" placeholder="{{'MESSAGE' | translate}}" required="true"></textarea>
+                  <input class="contact-form__btn" type="submit" value="{{'SEND' | translate}}">
                   <input type="text" name="_gotcha" style="display:none" />
               </form>
             </div>
@@ -139,10 +142,10 @@
             <div class="faq-section__slide-wrapper">
               <div class="faq-section__question-wrapper">
                 <div class="faq-section__slide-question">
-                  Who does the money go to?
+                  {{'FAQ.ONE.QUESTION' | translate}}
                 </div>
                 <div class="faq-section__slide-answer">
-                  We are working hard to look for partner charitable organizations to donate the funds to. Our goal is to partner with smaller organizatinos who have more difficulties finding donations. If you are part of a charitable organization, join our Slack channel to get in touch! Right now, we do not have any costs, so we donate 100% of what is generated. We are also putting in a lot of effort to make the entire process as transparent as possible. The possibility for you to vote for projects based on how many tabs you have opened is also in the roadmap.
+                  {{'FAQ.ONE.ANSWER' | translate}}
                 </div>
               </div>
 
@@ -150,10 +153,10 @@
 
               <div class="faq-section__question-wrapper">
                 <div class="faq-section__slide-question">
-                  Will it harm my computer?
+                  {{'FAQ.TWO.QUESTION' | translate}}
                 </div>
                 <div class="faq-section__slide-answer">
-                  Blocks for Change will not harm your computer in any way. It uses a very small amount of CPU power (around 3-5% generally, 10% at most during peaks), so you should not even notice it's running. If you need to perform some CPU heavy actions, you can always turn mining off in the settings.
+                  {{'FAQ.TWO.ANSWER' | translate}}
                 </div>
               </div>
 
@@ -161,10 +164,10 @@
 
               <div class="faq-section__question-wrapper">
                 <div class="faq-section__slide-question">
-                  Do I have to pay to use it?
+                  {{'FAQ.THREE.QUESTION' | translate}}
                 </div>
                 <div class="faq-section__slide-answer">
-                  Nope. Downloading - and using - Blocks for Change, is free and always will be. Just by using it you will already be helping out! If you want to help the team, get in touch with us through Slack, and share the project. The more users we have the more people we'll be able to help.
+                  {{'FAQ.THREE.ANSWER' | translate}}
                 </div>
               </div>
             </div>
@@ -173,6 +176,7 @@
       </div>
       
       <script type="text/javascript" src="js/app.js"></script>
+      <script type="text/javascript" src="js/lang.js"></script>
       <script type="text/javascript" src="js/factory/motivation-factory.js"></script>
       <script type="text/javascript" src="js/controllers/main-controller.js"></script>
       <script type="text/javascript" src="libs/fullPage/angular-fullpage.min.js"></script>

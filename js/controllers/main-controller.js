@@ -1,10 +1,13 @@
-myApp.controller('mainController', function ($timeout, $filter, motivationFactory) {
+myApp.controller('mainController', function ($timeout, $translate, $filter, motivationFactory) {
   'ngInject'
   var vm = this
   var xmrPriceEuro = 136
   var xmrPerHash = 0.00015283 / 1000000
   var userHashesPerDay = 125000
   var valueBeforeRound
+
+  getLanguageCode()
+
   vm.windowState = {}
   vm.windowState.isSettingsVisible = false
   vm.appData = {}
@@ -15,7 +18,7 @@ myApp.controller('mainController', function ($timeout, $filter, motivationFactor
   vm.isUserOnline = window.navigator.onLine
   vm.whiteBg = false
   vm.userCount = 100000
-  vm.revenue = $filter('number')(Math.round(vm.userCount * xmrPerHash * xmrPriceEuro * userHashesPerDay * 365)) + ' \u20AC/year'
+  vm.revenue = $filter('number')(Math.round(vm.userCount * xmrPerHash * xmrPriceEuro * userHashesPerDay * 365))
 
   vm.fullPageOptions = {
     verticalCentered: false,
@@ -97,15 +100,15 @@ myApp.controller('mainController', function ($timeout, $filter, motivationFactor
     var m = checkTime(today.getMinutes())
     vm.windowState.time = h + ':' + m
     if (h >= 5 && h <= 12) {
-      vm.windowState.salutation = 'Good morning, rockstar'
+      vm.windowState.salutation = 'GOOD_MORNING'
     } else if (h >= 13 && h <= 16) {
-      vm.windowState.salutation = 'Good afternoon, rockstar'
+      vm.windowState.salutation = 'GOOD_AFTERNOON'
     } else if (h >= 17 && h <= 20) {
-      vm.windowState.salutation = 'Good evening, rockstar'
+      vm.windowState.salutation = 'GOOD_EVENING'
     } else if (h >= 21 || h <= 4) {
-      vm.windowState.salutation = 'Good night, rockstar'
+      vm.windowState.salutation = 'GOOD_NIGHT'
     } else {
-      vm.windowState.salutation = 'Hello, rockstar'
+      vm.windowState.salutation = 'HELLO'
     }
 
     $timeout(function () {
@@ -115,6 +118,15 @@ myApp.controller('mainController', function ($timeout, $filter, motivationFactor
 
   vm.installExtension = function () {
     chrome.webstore.install(null, null, failureCallback)
+  }
+
+  function getLanguageCode () {
+    if (window.navigator.language.indexOf('es-') !== -1) {
+      vm.languageCode = 'es'
+    } else {
+      vm.languageCode = 'en'
+    }
+    $translate.use(vm.languageCode)
   }
 
   function failureCallback (e) {
