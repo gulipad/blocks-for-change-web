@@ -142,14 +142,14 @@ body {
   font-weight: 100;
   margin: 0;
   color: #fdfdfd;
-  text-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
 }
 
 .cover-section__clock {
   font-size: 9.5em;
   font-weight: 500;
   color: #fdfdfd;
-  text-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
 }
 
 .cover-section__salutation {
@@ -157,7 +157,7 @@ body {
   font-weight: 500;
   margin: 0;
   color: #fdfdfd;
-  text-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
 }
 
 .cover-section__download {
