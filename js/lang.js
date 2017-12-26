@@ -29,7 +29,7 @@ myApp.config(['$translateProvider', function ($translateProvider) {
     },
     WHAT_PAGE: {
       TITLE: 'It\'s more than just a dashboard. It\'s people helping people.',
-      TEXT: 'Blocks for Change is a beautiful dashboard for Chrome. It replaces your boring new tab page with a gorgeous, inspiring dashboard. Every tab you open a new tab, you help our network mine cryptocoin for charity.'
+      TEXT: 'Blocks for Change is a beautiful dashboard for Chrome. It replaces your boring new tab page with a gorgeous, inspiring dashboard. Every time you open a new tab, you help our network mine cryptocoin for charity.'
     },
     FAQ: {
       TITLE: 'Got questions? We\'re here to answer.',
