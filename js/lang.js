@@ -64,7 +64,7 @@ myApp.config(['$translateProvider', function ($translateProvider) {
     HELLO: 'Hola',
     YOU: 'capitán',
     FRONT_PAGE: {
-      PROMPT: 'Transforma tu página de inicio de Chrome en una herramienta un mundo mejor.'
+      PROMPT: 'Transforma tu página de inicio en una herramienta para un mundo mejor.'
     },
     WHY_PAGE: {
       TITLE: 'Creemos en la tecnología como fuerza para mejorar vidas.',
