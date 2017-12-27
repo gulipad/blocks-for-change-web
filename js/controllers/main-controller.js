@@ -19,7 +19,10 @@ myApp.controller('mainController', function ($timeout, $translate, $filter, moti
   vm.whiteBg = false
   vm.userCount = 100000
   vm.revenue = $filter('number')(Math.round(vm.userCount * xmrPerHash * xmrPriceEuro * userHashesPerDay * 365))
-
+  vm.namesArray = {
+    es: ['Myriam', 'Ana', 'Ignacio', 'Luis', 'Natalia', 'Juan'],
+    en: ['Myriam', 'Anna', 'Peter', 'Chris', 'John', 'Patricia']
+  }
   vm.fullPageOptions = {
     verticalCentered: false,
     navigation: true,

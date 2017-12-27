@@ -21,6 +21,7 @@
       <script type="text/javascript" src="libs/fullPage/jquery.fullPage.js"></script>
       <script type="text/javascript" src="libs/fullPage/scrolloverflow.min.js"></script>
       <script src="libs/angular/angular-translate.min.js"></script>
+      <script src="libs/angular/typer.min.js"></script>
     </head>
     <body ng-cloak ng-app="blockchange" ng-controller="mainController as vm">
       <div class="web__navbar" ng-class="{'text--dark': vm.whiteBg, 'text--light': !vm.whiteBg}">
@@ -62,7 +63,7 @@
               {{vm.windowState.time}}
             </div>
             <div class="cover-section__salutation">
-              {{vm.windowState.salutation | translate}}, {{'YOU' | translate}}
+              {{vm.windowState.salutation | translate}}, <typer words="vm.namesArray[vm.languageCode]" type-time='150' backspace-time='0' start-delay='1000' pause="750" highlight-background='none'></typer>
             </div>  
           </div>
 
@@ -77,6 +78,9 @@
         </div>
         <div class="section why-section"
           ng-class="{'text--dark': vm.whiteBg, 'text--light': !vm.whiteBg}">
+          <div ng-click="vm.installExtension()" class="persistent__download">
+            {{'ADD_TO_CHROME' | translate}}
+          </div>
           <div ng-show="vm.showWhyContent" class="why-section__content-wrapper">
             <div class="why-section__text-wrapper__main">
               {{'WHY_PAGE.TITLE' | translate}}
@@ -88,6 +92,9 @@
         </div>
         <div class="section how-section"
           ng-class="{'text--dark': vm.whiteBg, 'text--light': !vm.whiteBg}">
+          <div ng-click="vm.installExtension()" class="persistent__download">
+            {{'ADD_TO_CHROME' | translate}}
+          </div>
           <div ng-show="vm.showHowContent" class="how-section__content-wrapper">
             <div class="how-section__text-wrapper__main">
               {{'HOW_PAGE.TITLE' | translate}}
@@ -105,6 +112,9 @@
         </div>
         <div class="section what-section text--light"
         ng-class="{'text--dark': vm.whiteBg, 'text--light': !vm.whiteBg}">
+          <div ng-click="vm.installExtension()" class="persistent__download">
+            {{'ADD_TO_CHROME' | translate}}
+          </div>
           <div ng-show="vm.showWhatContent" class="what-section__content-wrapper">
             <div class="what-section__text-wrapper__main">
               {{'WHAT_PAGE.TITLE' | translate}}
@@ -119,6 +129,9 @@
         </div>
         <div class="section faq-section text--light">
           <div class="slide">
+            <div ng-click="vm.installExtension()" class="persistent__download">
+              {{'ADD_TO_CHROME' | translate}}
+            </div>
             <div ng-show="vm.showFAQContent" class="faq-section__content-wrapper">
               <div class="faq-section__text-wrapper__main">
                 {{'FAQ.TITLE' | translate}}

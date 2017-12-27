@@ -14,6 +14,20 @@ body {
   display: none !important;
 }
 
+.persistent__download {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 7px 12px;
+  background: none;
+  margin-top: 45px;
+  z-index: 1;
+}
+
 .image-overlay {
   position: absolute;
   z-index: 0;
