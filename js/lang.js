@@ -23,13 +23,13 @@ myApp.config(['$translateProvider', function ($translateProvider) {
     },
     HOW_PAGE: {
       TITLE: 'Become part of a network of heroes.',
-      TEXT: 'Instead of donating money or time, you help us by donating a tiny bit of your spare computer power. We use this power to mine cryptocoins (think Bitcoin), and then give it all away. We are just getting started. We are still growing. Enter a number below to see how much our network can generate.',
+      TEXT: 'Instead of donating money or time, you help us by donating a tiny bit of your spare computer power. We use this power to raise cryptocoins (think Bitcoin), and then give it all away. We are just getting started. We are still growing. Enter a number below to see how much our network can generate.',
       USERS: 'users',
       UNIT: '€/year'
     },
     WHAT_PAGE: {
       TITLE: 'It\'s more than just a dashboard. It\'s people helping people.',
-      TEXT: 'Blocks for Change is a beautiful dashboard for Chrome. It replaces your boring new tab page with a gorgeous, inspiring dashboard. Every time you open a new tab, you help our network mine cryptocoin for charity.'
+      TEXT: 'Blocks for Change is a beautiful dashboard for Chrome. It replaces your boring new tab page with a gorgeous, inspiring dashboard. Every time you open a new tab, you help our network generate cryptocoin for charity.'
     },
     FAQ: {
       TITLE: 'Got questions? We\'re here to answer.',
@@ -64,28 +64,28 @@ myApp.config(['$translateProvider', function ($translateProvider) {
     HELLO: 'Hola',
     YOU: 'capitán',
     FRONT_PAGE: {
-      PROMPT: 'Transforma tu página de inicio de Chrome en una herramienta para el bien.'
+      PROMPT: 'Transforma tu página de inicio de Chrome en una herramienta un mundo mejor.'
     },
     WHY_PAGE: {
-      TITLE: 'Creemos en la tecnología como fuerza para el bien.',
-      TEXT: 'Nuestra misión: Transformar la tecnología en una herramienta de cambio social. El blockchain está revolucionando el dinero, negocios, y organizaciones. Nuestra idea es sencilla: queremos revolucionar la ayuda humanitaria.'
+      TITLE: 'Creemos en la tecnología como fuerza para mejorar vidas.',
+      TEXT: 'Nuestra misión: Transformar la tecnología en una herramienta de cambio social. El blockchain está revolucionando el dinero, los negocios, y las organizaciones. Nuestra idea es sencilla: queremos revolucionar la ayuda humanitaria.'
     },
     HOW_PAGE: {
       TITLE: 'Forma parte de nuestra comunidad de héroes.',
-      TEXT: 'En lugar de donar tiempo o dinero, nos ayudas donando un poquito de energía que tu ordenador no esté utilizando. Usamos esta energía para generar criptomonedas (piensa Bitcoin), y luego las donamos. Acabamos de empezar. Introduce un número de usuarios para ver cuánto puede generar nuestra comunidad.',
+      TEXT: 'En lugar de donar tiempo o dinero, nos ayudas donando un poquito de energía que tu ordenador no esté utilizando. Usamos esta energía para generar criptomonedas (piensa en Bitcoin), y luego las donamos. Acabamos de empezar. Introduce un número de usuarios para ver cuánto puede generar nuestra comunidad.',
       USERS: 'usuarios',
       UNIT: '€/año'
     },
     WHAT_PAGE: {
       TITLE: 'Es más que una página de inicio. Somos personas ayudando a personas.',
-      TEXT: 'Blocks for Change reemplaza tu aburrida página de inicio de siempre con una página de inicio bonita e inspiradora. Cada pestaña que abres nos ayuda a minar criptomonedas para ayuda humanitaria.'
+      TEXT: 'Blocks for Change reemplaza la página aburrida de inicio de Chrome con otra bonita e inspiradora. Con cada pestaña que abres nos ayudas a recaudar criptomonedas para ayuda humanitaria.'
     },
     FAQ: {
       TITLE: '¿Preguntas? Estamos aquí para resolverlas.',
       TEXT: 'Si quieres hablar con nosotros, no dudes en ponerte en contacto. Únete a la conversación en nuestro canal de Slack con el icono de la esquina inferior derecha, o mándanos un mensaje.',
       ONE: {
-        QUESTION: 'A quién va el dinero?',
-        ANSWER: 'Estamos trabajando duro para encontrar partners benéficos a quienes donar los fondos. Nuestro objetivo es unirnos a proyectos más pequeños, que tienen más dificultades para recaudar fondos. Si eres parte de una organización benéfica, únete a nuestro canal de Slack para ponerte en contacto. A día de hoy, todos nuestros gastos están cubiertos, así que donamos el 100% de lo que generamos. Estamos esforzándonos también por hacer nuestra organización lo más transparente posible.'
+        QUESTION: '¿A quién va el dinero?',
+        ANSWER: 'Trabajamos continuamente para encontrar proyectos benéficos a los que donar los fondos. Nuestro objetivo es unirnos a proyectos más pequeños, que tienen más dificultades para recaudar fondos. Si eres parte de una organización benéfica, únete a nuestro canal de Slack para ponerte en contacto. A día de hoy, todos nuestros gastos están cubiertos, así que donamos el 100% de lo que generamos. Estamos esforzándonos también por hacer nuestra organización lo más transparente posible.'
       },
       TWO: {
         QUESTION: '¿Es malo para mi ordenador?',
@@ -93,7 +93,7 @@ myApp.config(['$translateProvider', function ($translateProvider) {
       },
       THREE: {
         QUESTION: '¿Hay que pagar para utilizarlo?',
-        ANSWER: 'Nope. Descargar - y usar - Blocks for Change, es gratis y siempre lo será. ¡Sólo con utilizarlo estarás ya ayudando! Si quieres ayudar todavía más, ponte en contacto con el equipo a través de Slack, y comparte el proyecto. Cuantos más usuarios tengamos, más impacto positivo tendremos.'
+        ANSWER: 'Nope. Descargar - y usar - Blocks for Change, es gratis y siempre lo será. ¡Sólo con utilizarlo ya estás ayudando! Si quieres ayudar todavía más, ponte en contacto con el equipo a través de Slack, y comparte el proyecto. Cuantos más usuarios tengamos, más impacto positivo tendremos.'
       }
     }
   }
