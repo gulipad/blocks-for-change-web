@@ -55,15 +55,12 @@
         ng-style="{'background-image':'url(public/img/img-' + vm.randomImageId + '.jpg)'}"
         >
           <div class="image-overlay" ></div>
-          <div class="cover-section__top-third">
-          </div>
-
           <div class="cover-section__middle-third">
             <div class="cover-section__clock" ng-init="vm.setClock()">
               {{vm.windowState.time}}
             </div>
             <div class="cover-section__salutation">
-              {{vm.windowState.salutation | translate}}, <typer words="vm.namesArray[vm.languageCode]" type-time='150' backspace-time='0' start-delay='1000' pause="750" highlight-background='none'></typer>
+              {{vm.windowState.salutation | translate}}, <typer words="vm.namesArray[vm.languageCode]" type-time='200' backspace-time='200' start-delay='1000' pause="1000" highlight-background='#2980b9'></typer>
             </div>  
           </div>
 
