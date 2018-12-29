@@ -120,7 +120,8 @@ myApp.controller('mainController', function ($timeout, $translate, $filter, moti
   }
 
   vm.installExtension = function () {
-    chrome.webstore.install(null, null, failureCallback)
+    alert('Ooops. Google has blocked our extension due to a ban on all miners in ther Webstore. If you would still like to download it, hit us up at ignaciomorenopubul@gmail.com')
+    //chrome.webstore.install(null, null, failureCallback)
   }
 
   function getLanguageCode () {
